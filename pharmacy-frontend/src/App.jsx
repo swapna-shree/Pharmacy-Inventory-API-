@@ -6,6 +6,7 @@ import './index.css';
 function App() {
   const [showList, setShowList] = useState(false);
   const [refreshList, setRefreshList] = useState(false);
+  const [filter, setFilter] = useState('none');
 
   const toggleList = () => setShowList(prev => !prev);
   const handleMedicineAdded = () => setRefreshList(prev => !prev);
@@ -23,10 +24,15 @@ function App() {
         {showList ? 'Hide Medicines' : 'Show Medicines'}
       </button>
 
-      {showList && <MedicineList refreshFlag={refreshList} />}
+      {showList && (
+        <MedicineList
+          refresh={refreshList}
+          filter={filter}
+          setFilter={setFilter}
+        />
+      )}
     </div>
   );
 }
 
 export default App;
-
