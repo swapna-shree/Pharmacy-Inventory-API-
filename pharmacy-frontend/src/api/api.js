@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:8080/api/medicines';
+const BASE_URL = 'https://pharmacy-inventory-api-ooas.onrender.com/api/medicines';
 
 // Centralized error handler
 const handleError = (error, endpoint = '') => {
