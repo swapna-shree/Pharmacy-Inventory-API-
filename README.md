@@ -1,4 +1,4 @@
-# Pharmacy Inventory Tracker 
+# Pharmacy Inventory Tracker API
 
 A full-stack pharmacy inventory app:  
 - **Backend**: Node.js + Express + MongoDB  
