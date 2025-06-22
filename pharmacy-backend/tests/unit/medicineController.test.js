@@ -62,7 +62,7 @@ describe('Medicine Controller - unit tests', () => {
       await controller.getAll(req, res);
       expect(res.status).toHaveBeenCalledWith(500);
       expect(res.json).toHaveBeenCalledWith({
-        error: 'Server Error. UNable to Fetch all Medicines'
+        error: 'Server Error. Unable to Fetch all Medicines'
       });
     });
   });
@@ -164,7 +164,7 @@ describe('Medicine Controller - unit tests', () => {
       await controller.lowStock(req, res);
       expect(res.status).toHaveBeenCalledWith(500);
       expect(res.json).toHaveBeenCalledWith({
-        error: 'Server Error.Unable to fetch Low Stock Medicines.'
+        error: 'Server Error. Unable to fetch Low Stock Medicines.'
       });
     });
   });
@@ -191,7 +191,7 @@ describe('Medicine Controller - unit tests', () => {
       await controller.expired(req, res);
       expect(res.status).toHaveBeenCalledWith(500);
       expect(res.json).toHaveBeenCalledWith({
-        error: 'Server Error.Unable to fetch Expired Medicines.'
+        error: 'Server Error. Unable to fetch Expired Medicines.'
       });
     });
   });
