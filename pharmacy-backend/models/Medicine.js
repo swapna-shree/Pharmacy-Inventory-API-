@@ -9,15 +9,15 @@ const medicineSchema = new mongoose.Schema({
         type : String,
         required : true,
     },
-    name : {
-        type : String,
-        required : true,
-    },
     batchNumber : {
         type : String,
         required : true,
     },
     quantity : {
+        type : Number,
+        required : true,
+    },
+    price : {
         type : Number,
         required : true,
     },

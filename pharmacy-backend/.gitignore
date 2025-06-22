@@ -1,2 +1,15 @@
-node_modules
+node_modules/
 .env
+.env.*
+coverage/
+vitest-cache/
+**/.cache/mongodb-binaries
+.vscode/
+.idea/
+dist/
+build/
+logs/
+*.log
+*.snap
+.DS_Store
+Thumbs.db
