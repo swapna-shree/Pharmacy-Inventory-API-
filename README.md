@@ -120,6 +120,10 @@ https://pharmacy-backend.onrender.com/api/medicines
 
 #  Backend Test Suite
 
+## Test Coverage
+![image](https://github.com/user-attachments/assets/cae14a66-f0fb-4bcb-82ee-1c9f82bb8083)
+
+
 ## Test Structure
 
 ###  Unit Tests
