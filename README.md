@@ -17,50 +17,6 @@ A full-stack pharmacy inventory app:
 
 ---
 
-##  Repo Structure
-
-```
-
-Pharmacy-Inventory-Tracker/
-├── pharmacy-backend/
-│   ├── config/
-│   │   └── db.js
-│   ├── controllers/
-│   │   └── medicineController.js
-│   ├── models/
-│   │   └── Medicine.js
-│   ├── routes/
-│   │   └── medicineRoutes.js
-│   ├── tests/
-│   ├── index.js
-│   ├── package.json
-│   └── package-lock.json
-│
-├── pharmacy-frontend/
-│   ├── public/
-│   └── src/
-│       ├── api/
-│       ├── assets/
-│       ├── components/
-│       │   ├── MedicineForm.jsx
-│       │   ├── MedicineList.jsx
-│       │   └── MedicineRow.jsx
-│       ├── App.jsx
-│       ├── App.css
-│       ├── index.css
-│       ├── main.jsx
-│       ├── vite.config.js
-│       ├── package.json
-│       ├── package-lock.json
-│       └── README.md
-│
-├── .gitignore
-└── README.md
-
-```
-
----
-
 ##  Backend Setup (pharmacy-backend)
 
 ### Install & Configure
@@ -162,6 +118,53 @@ https://pharmacy-backend.onrender.com/api/medicines
      ```
 3. Deploy & access live URL
 
+#  Backend Test Suite
+
+## Test Structure
+
+###  Unit Tests
+- Test individual controller logic (e.g., `medicineController.js`)
+- Mocked dependencies with `vi.mock()` to isolate business logic
+
+###  Integration Tests
+- Use `mongodb-memory-server` for in-memory MongoDB
+- Test Mongoose models with real-like DB operations
+
+###  API (E2E) Tests
+- Use `supertest` to test API endpoints
+- Validate full request-response cycle
+
+---
+
+##  Core Tools
+
+| Tool                    | Purpose                              |
+|-------------------------|--------------------------------------|
+| `vitest`                | Test runner, assertions, mocking     |
+| `supertest`             | HTTP assertions                      |
+| `mongodb-memory-server` | Ephemeral MongoDB (in-memory)                   |
+| `@vitest/coverage-v8`   | HTML + CLI coverage reports          |
+
+---
+
+## How to Run
+
+From the `pharmacy-backend` directory:
+
+```bash
+npm test
+````
+To view code coverage:
+
+```bash
+npm run coverage
+```
+
+Then open the report:
+
+```
+pharmacy-backend/coverage/index.html
+```
 ---
 
 ##  Final Workflow
